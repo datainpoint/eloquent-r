@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>輕鬆學習 R 語言</title>
+  <meta name="description" content="從基礎到應用，掌握資料科學的關鍵能力。" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="輕鬆學習 R 語言" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="從基礎到應用，掌握資料科學的關鍵能力。" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="輕鬆學習 R 語言" />
+  
+  <meta name="twitter:description" content="從基礎到應用，掌握資料科學的關鍵能力。" />
+  
+
+<meta name="author" content="郭耀仁" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="gettingStarted.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 關於本書</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#誰是本書的目標讀者"><i class="fa fa-check"></i><b>1.1</b> 誰是本書的目標讀者</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#誰可能不是本書的目標讀者"><i class="fa fa-check"></i><b>1.2</b> 誰可能不是本書的目標讀者</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#程式區塊"><i class="fa fa-check"></i><b>1.3</b> 程式區塊</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#環境與版本"><i class="fa fa-check"></i><b>1.4</b> 環境與版本</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="gettingStarted.html"><a href="gettingStarted.html"><i class="fa fa-check"></i><b>2</b> 起步走</a><ul>
+<li class="chapter" data-level="2.1" data-path="gettingStarted.html"><a href="gettingStarted.html#開發環境直譯器-r"><i class="fa fa-check"></i><b>2.1</b> 開發環境：直譯器 R</a></li>
+<li class="chapter" data-level="2.2" data-path="gettingStarted.html"><a href="gettingStarted.html#開發環境整合開發環境-rstudio"><i class="fa fa-check"></i><b>2.2</b> 開發環境：整合開發環境 RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="gettingStarted.html"><a href="gettingStarted.html#啟動-rstudio"><i class="fa fa-check"></i><b>2.3</b> 啟動 RStudio</a></li>
+<li class="chapter" data-level="2.4" data-path="gettingStarted.html"><a href="gettingStarted.html#整合開發環境-rstudio-介面"><i class="fa fa-check"></i><b>2.4</b> 整合開發環境 RStudio 介面</a></li>
+<li class="chapter" data-level="2.5" data-path="gettingStarted.html"><a href="gettingStarted.html#挑選-rstudio-佈景主題色彩"><i class="fa fa-check"></i><b>2.5</b> 挑選 RStudio 佈景主題色彩</a></li>
+<li class="chapter" data-level="2.6" data-path="gettingStarted.html"><a href="gettingStarted.html#r-程式設計起步走"><i class="fa fa-check"></i><b>2.6</b> R 程式設計起步走</a></li>
+<li class="chapter" data-level="2.7" data-path="gettingStarted.html"><a href="gettingStarted.html#簡單常用的-r-內建函數"><i class="fa fa-check"></i><b>2.7</b> 簡單常用的 R 內建函數</a></li>
+<li class="chapter" data-level="2.8" data-path="gettingStarted.html"><a href="gettingStarted.html#r-console-一直出現-的故障排除"><i class="fa fa-check"></i><b>2.8</b> R Console 一直出現 + 的故障排除</a></li>
+<li class="chapter" data-level="2.9" data-path="gettingStarted.html"><a href="gettingStarted.html#小結"><i class="fa fa-check"></i><b>2.9</b> 小結</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">輕鬆學習 R 語言</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">輕鬆學習 R 語言</h1>
+<p class="author"><em>郭耀仁</em></p>
+</div>
+<div id="關於本書" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> 關於本書</h1>
+<p>我希望可以寫作一本閱讀起來不那麼生澀的程式語言書籍，讓原本沒有程式基礎但是工作上有分析需求的使用者，像是產品經理（Product Managers）、商業分析師（Business Analysts）或行銷企劃人員（Marketing Specialists）能夠用很輕鬆的方式學會 R 語言，進而應用到工作中，提升工作掌握度。
+這本書的寫作風格以輕鬆簡潔作為主要訴求，理想的閱讀時間是工作日的午餐時間，我認為最好的學習就是不佔用讀者工作以外的休憩時間，因此若能夠讓讀者一邊享用美味的午餐，一邊閱讀輕鬆簡潔的程式語言書籍，該是多麼美好而且值得推廣的理念。</p>
+<div id="誰是本書的目標讀者" class="section level2">
+<h2><span class="header-section-number">1.1</span> 誰是本書的目標讀者</h2>
+<p>這是一本 R 語言的入門書，它適合：</p>
+<ol style="list-style-type: decimal">
+<li>從未接觸過 R 語言的初學者。</li>
+<li>想學習 R 語言的資料科學基本應用：資料處理與探索性分析的初學者。</li>
+<li>使用過 R 語言，但只是快速應用套件而無法自己撰寫程式解題的初階使用者。</li>
+</ol>
+</div>
+<div id="誰可能不是本書的目標讀者" class="section level2">
+<h2><span class="header-section-number">1.2</span> 誰可能不是本書的目標讀者</h2>
+<p>這是一本 R 語言的入門書，它無法滿足這些需求：</p>
+<ol style="list-style-type: decimal">
+<li>已經能嫻熟使用 R 語言的中高階使用者。</li>
+<li>想尋找一本鉅細靡遺 R 語言技術手冊的中階使用者。</li>
+</ol>
+</div>
+<div id="程式區塊" class="section level2">
+<h2><span class="header-section-number">1.3</span> 程式區塊</h2>
+<p>本書內容所附的程式區塊具有兩種特性：<strong>自我包含（Self-contained）</strong>與<strong>自我解釋（Self-explanatory）</strong>，這裡所謂的自我包含所指的是每一個程式區塊都可以獨立執行，不需要倚賴其他的程式區塊，這也是為什麼您可能會看到很多相同的程式一直重複出現，因為我希望讓讀者能夠在任何地方中斷閱讀，也能夠在任何地方繼續閱讀。
+而這裡所謂的自我解釋所指的是每一個程式區塊都是在解釋（或示範）前後文的描述，因為我相信在程式語言的學習上，千言萬語的文字敘述，往往不如一行程式與它所執行的結果還能夠清楚表達一個觀念。本書所附的程式區塊採用輸入與輸出一併陳列，鼓勵讀者全選複製並在自己的 R/RStudio 環境執行並觀察輸出。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="dv">3</span>){</span>
+<span id="cb1-2"><a href="index.html#cb1-2"></a>  <span class="kw">print</span>(<span class="kw">c</span>(<span class="st">&quot;我&quot;</span>, <span class="st">&quot;喜歡&quot;</span>, <span class="st">&quot;R 語言&quot;</span>)[i])</span>
+<span id="cb1-3"><a href="index.html#cb1-3"></a>}</span></code></pre></div>
+<pre><code>## [1] &quot;我&quot;
+## [1] &quot;喜歡&quot;
+## [1] &quot;R 語言&quot;</code></pre>
+</div>
+<div id="環境與版本" class="section level2">
+<h2><span class="header-section-number">1.4</span> 環境與版本</h2>
+<p>本書使用 R/RStudio 撰寫 R 的程式設計，詳細版本資訊為：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="index.html#cb3-1"></a><span class="kw">sessionInfo</span>()</span></code></pre></div>
+<pre><code>## R version 4.0.3 (2020-10-10)
+## Platform: x86_64-apple-darwin17.0 (64-bit)
+## Running under: macOS Big Sur 10.16
+## 
+## Matrix products: default
+## BLAS:   /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRblas.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/4.0/Resources/lib/libRlapack.dylib
+## 
+## locale:
+## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+## 
+## attached base packages:
+## [1] stats     graphics  grDevices utils     datasets  methods   base     
+## 
+## loaded via a namespace (and not attached):
+##  [1] compiler_4.0.3  magrittr_2.0.1  bookdown_0.21   tools_4.0.3    
+##  [5] htmltools_0.5.0 rstudioapi_0.13 yaml_2.2.1      stringi_1.5.3  
+##  [9] rmarkdown_2.6   knitr_1.31      stringr_1.4.0   xfun_0.20      
+## [13] digest_0.6.27   rlang_0.4.9     evaluate_0.14</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="gettingStarted.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["eloquent-r.pdf", "eloquent-r.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
