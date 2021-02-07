@@ -20,3 +20,11 @@ otherDataStructures
 兩個維度的向量矩陣matrix
 多個維度的向量陣列array
 小結-1
+webScraping
+網站爬蟲的核心任務
+安裝與載入套件
+擷取-json-格式資料
+擷取-xml-格式資料
+擷取-html-格式資料
+chrome-瀏覽器外掛selector-gadget
+chrome-瀏覽器外掛xpath-helper

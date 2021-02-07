@@ -345,4 +345,4 @@ my_arr[, 2, 2]  # 選出第二個矩陣的第二個 column
 
 ## 小結
 
-在這個小節中我們簡介向量以外的資料結構，包含 R 語言中的清單（list）、資料框（data.frame）、因素向量（factor）、矩陣（matrix）與陣列（array）。
+在 Chapter \@ref(otherDataStructures) 中我們簡介向量以外的資料結構，包含 R 語言中的清單（list）、資料框（data.frame）、因素向量（factor）、矩陣（matrix）與陣列（array）。
