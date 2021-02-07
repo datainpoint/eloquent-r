@@ -13,3 +13,10 @@ r-程式設計起步走
 簡單常用的-r-內建函數
 r-console-一直出現-的故障排除
 小結
+otherDataStructures
+彈性的容器清單list
+現代化表格資料框data.frame
+有階層資訊的向量因素向量factor
+兩個維度的向量矩陣matrix
+多個維度的向量陣列array
+小結-1
