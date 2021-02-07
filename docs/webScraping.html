@@ -166,6 +166,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5" data-path="webScraping.html"><a href="webScraping.html#擷取-html-格式資料"><i class="fa fa-check"></i><b>4.5</b> 擷取 HTML 格式資料</a></li>
 <li class="chapter" data-level="4.6" data-path="webScraping.html"><a href="webScraping.html#chrome-瀏覽器外掛selector-gadget"><i class="fa fa-check"></i><b>4.6</b> Chrome 瀏覽器外掛：Selector Gadget</a></li>
 <li class="chapter" data-level="4.7" data-path="webScraping.html"><a href="webScraping.html#chrome-瀏覽器外掛xpath-helper"><i class="fa fa-check"></i><b>4.7</b> Chrome 瀏覽器外掛：XPath Helper</a></li>
+<li class="chapter" data-level="4.8" data-path="webScraping.html"><a href="webScraping.html#小結-2"><i class="fa fa-check"></i><b>4.8</b> 小結</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -205,7 +206,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="安裝與載入套件" class="section level2">
 <h2><span class="header-section-number">4.2</span> 安裝與載入套件</h2>
-<p>在這個小節中我們主要應用作為網頁資料擷取的套件是 <code>jsonlite</code>、<code>xml2</code>、<code>magrittr</code> 與 <code>rvest</code>，其中 <code>magrittr</code> 是為了使用 <code>%&gt;%</code> 搭配 <code>rvest</code> 中的函數、<code>xml2</code> 是 <code>rvest</code> 的依賴套件，因此安裝時只需指定 <code>jsonlite</code>、<code>rvest</code> 與 <code>magrittr</code> 即可。
+<p>在這個小節中我們主要應用作為網頁資料擷取的套件是 jsonlite、xml2、magrittr 與 rvest，其中 magrittr 是為了使用 <code>%&gt;%</code> 搭配 rvest 中的函數、xml2 是 rvest 的依賴套件，因此安裝時只需指定 jsonlite、rvest 與 magrittr 即可。
 我們可以選擇透過命令列（Console）以 <code>install.packages()</code> 函數進行安裝。</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="webScraping.html#cb1-1"></a><span class="co"># 安裝 jsonlite、rvest 與 magrittr</span></span>
 <span id="cb1-2"><a href="webScraping.html#cb1-2"></a>pkgs &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;jsonlite&quot;</span>, <span class="st">&quot;rvest&quot;</span>, <span class="st">&quot;magrittr&quot;</span>)</span>
@@ -258,7 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4       68       1 120.12444444 23.26472222    310
 ## 5       51       2    120.37722    22.35222    204
 ## 6       82       1 120.24583056 23.17904722    203</code></pre>
-<p>同樣以 jsonlite 套件中的 <code>fromJSON()</code> 函數示範擷取 data.nba.net 所提供的 Web API 將 JSON 格式資料載入 R 語言中，這時由於該 Web API 提供的是 JSON，擷取之後的資料結構則會是 list。</p>
+<p>同樣以 jsonlite 套件中的 <code>fromJSON()</code> 函數示範擷取 data.nba.net 所提供的 Web API 將 JSON 格式資料載入 R 語言中，這時由於該 Web API 提供的是 JSON，擷取之後的資料結構則會是 <code>list</code>。</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="webScraping.html#cb9-1"></a><span class="co"># 安裝 jsonlite、rvest 與 magrittr</span></span>
 <span id="cb9-2"><a href="webScraping.html#cb9-2"></a><span class="co">#pkgs &lt;- c(&quot;jsonlite&quot;, &quot;rvest&quot;, &quot;magrittr&quot;)</span></span>
 <span id="cb9-3"><a href="webScraping.html#cb9-3"></a><span class="co">#install.packages(pkgs)</span></span>
@@ -278,7 +279,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="擷取-xml-格式資料" class="section level2">
 <h2><span class="header-section-number">4.4</span> 擷取 XML 格式資料</h2>
-<p>接著我們利用 xml2 套件示範擷取政府資料開放平台：空氣品質指標（AQI）所提供的 Web API 將 XML 格式資料載入 R 語言中，使用 <code>read_xml()</code> 函數之後獲得的資料結構是命名為 xml_document 的 list，面對 xml_document 可以呼叫 xml2 套件提供的 <code>xml_find_all()</code> 與 <code>xml_text()</code> 函數指定 XPath 並解析出文字格式的資料。</p>
+<p>接著我們利用 xml2 套件示範擷取政府資料開放平台：空氣品質指標（AQI）所提供的 Web API 將 XML 格式資料載入 R 語言中，使用 <code>read_xml()</code> 函數之後獲得的資料結構是命名為 xml_document 的 <code>list</code>，面對 xml_document 可以呼叫 xml2 套件提供的 <code>xml_find_all()</code> 與 <code>xml_text()</code> 函數指定 XPath 並解析出文字格式的資料。</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="webScraping.html#cb13-1"></a><span class="co"># 安裝 jsonlite、rvest 與 magrittr</span></span>
 <span id="cb13-2"><a href="webScraping.html#cb13-2"></a><span class="co">#pkgs &lt;- c(&quot;jsonlite&quot;, &quot;rvest&quot;, &quot;magrittr&quot;)</span></span>
 <span id="cb13-3"><a href="webScraping.html#cb13-3"></a><span class="co">#install.packages(pkgs)</span></span>
@@ -431,6 +432,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb25-4"><a href="webScraping.html#cb25-4"></a><span class="st">  </span><span class="kw">as.numeric</span>()</span>
 <span id="cb25-5"><a href="webScraping.html#cb25-5"></a>rating</span></code></pre></div>
 <pre><code>## [1] 8.4</code></pre>
+</div>
+<div id="小結-2" class="section level2">
+<h2><span class="header-section-number">4.8</span> 小結</h2>
+<p>在 Chapter <a href="webScraping.html#webScraping">4</a> 中我們簡介如何以 R 語言透過 jsonlite 、 xml2 與 rvest 等套件實踐網站爬蟲的核心任務：請求資料（requesting data）與解析資料（parsing data）。面對不同類型的網頁資料，分別以 jsonlite 套件的 <code>fromJSON()</code> 函數處理 Web API 的 JSON 格式資料；以 xml2 套件的 <code>read_xml()</code> 、 <code>xml_find_all()</code> 與 <code>xml_text()</code> 函數處理 Web API 的 XML 格式資料；以 rvest 套件的 <code>read_html()</code>、<code>html_nodes()</code> 與 <code>html_text()</code> 函數搭配 Chrome 瀏覽器外掛 Selector Gadget 以及 XPath Helper 處理 HTML 格式資料。</p>
 
 </div>
 </div>
